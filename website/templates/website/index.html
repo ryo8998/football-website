@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link%}
+    <link rel="stylesheet" type="text/css" href="{% static 'website/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container"> 
+        <div id="main-container" class="mt-5">
+            
+            <div class="d-flex flex-wrap justify-content-around">
+                <div id="main-left-container" class="col-md-8 d-flex flex-wrap align-content-center">
+                    <h1 class="col-12 my-2 py-2">What is Football?</h1>
+                    <p class="col-12 my-2 py-2">Football(or soccer), more offcially called as association football, is a team sport played with a spherical ball between two teams of 11 players. It is played by approximately 250 million players in over 200 countries and dependencies, making it the world's most popular sport. The game is played on a rectangular field called a pitch with a goal at each end. The object of the game is to score more goals than the opposition by moving the ball beyond the goal line into the opposing goal, usually within a time frame of 90 or more minutes.</p>
+                    <p class="col-12 my-2 py-2">Football is governed internationally by the International Federation of Association Football (FIFA; French: Fédération Internationale de Football Association), which organises World Cups for men and women every four years.[5] The men's FIFA World Cup has taken place every four years since 1930, with the exception of 1942 and 1946 tournaments, which were cancelled due to World War II. Approximately 190–200 national teams compete in qualifying tournaments within the scope of continental confederations for a place in the finals. The finals tournament is held every four years and involves 32 national teams competing over four weeks.[b] It is the most prestigious men's football tournament in the world, and the most widely viewed and followed sporting event in the world, exceeding the Olympic Games. Similarly, the FIFA Women's World Cup has been played every four years since 1991, though football has been played by women since it has existed. A record-breaking 1.12 billion viewers watched the 2019 FIFA Women's World Cup in France.</p>
+                </div>
+                <div id="main-right-container" class="d-flex flex-wrap col-md-3 align-items-center">
+                    {% for pic in pics%}
+                        <div class="col-12 my-2">
+                            <img class="w-100 h-auto" src="{{pic}}" alt="image">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

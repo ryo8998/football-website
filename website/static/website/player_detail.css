@@ -1,0 +1,16 @@
+.container {
+    margin-bottom: auto;
+}
+
+#image {
+    box-shadow: 0.3rem 0.3rem rgba(17, 17, 77, 0.5);
+}
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+td {
+    font-size: 1.5rem;
+    font-family: 'Permanent Marker', cursive;
+}

@@ -1,0 +1,10 @@
+#rule-main-container{
+    border: darkgray 1px solid;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0.5rem 0.5rem rgba(17, 17, 77, 0.5)
+}
+
+.container{
+    margin-bottom: auto;
+}

@@ -1,0 +1,12 @@
+.container{
+    margin-bottom: auto;
+}
+
+#link-container {
+    border:slategrey 0.5rem solid;
+    /* border-left:slategrey 1.5rem solid; */
+    box-shadow: 0.5rem 0.5rem rgba(6, 6, 12, 0.5);
+}
+#link-container a {
+    font-size: 1.5rem;
+}

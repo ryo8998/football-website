@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'website/star_players.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap" rel="stylesheet">
+{% endblock link %}
+
+{% block content %}
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-around p-3">
+            {% for player in players%}
+            <div id="player-container"  class="col-12 col-sm-4 col-md-3 col-lg-2 p-1 mx-2">
+                {% comment %} <img class="w-100 h-auto" src="{{player.thumbnail}}" alt=""> {% endcomment %}
+                <a href={% url "player-detail" id=player.pk%}>
+                    <div id="image-ref">
+                        <img src="{{player.thumbnail}}" alt="">
+                    </div>
+                    {% comment %} <img class="w-100 h-100" height="150px" width="150px" src="{{player.thumbnail}}" alt=""> {% endcomment %}
+                    {% comment %} <img src="{{player.thumbnail}}" alt=""> {% endcomment %}
+                    <h5>{{player.name}}</h5>
+                    <h5>{{player.player_team}}</h5>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

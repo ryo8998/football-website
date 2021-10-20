@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+     <link rel="stylesheet" type="text/css" href="{% static 'website/player_detail.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap" rel="stylesheet">
+{% endblock link %}
+    
+{% block content %}
+<div class="container h-100 d-flex justify-content-center align-items-center">
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <td colspan="2"><h2 class="bg-dark text-light">Player Information</h2></td>
+            </tr>
+        </thead>
+        <tbody>
+             <tr>
+                <td colspan="2"><img id="image" class="col-12 col-md-6 h-auto" src="{{player.pic}}" alt=""></td>
+            </tr>
+            <tr>
+                <td class="col-4 col-md-2">Name:</td>
+                <td>{{player.name}}</td>
+            </tr>
+            <tr>
+                <td class="col-4 col-md-2">Age:</td>
+                <td>{{player.age}}</td>
+            </tr>
+            <tr>
+                <td class="col-4 col-md-2">Team:</td>
+                <td>{{player.player_team}}</td>
+            </tr>
+            <tr>
+                <td class="col-4 col-md-2">Height:</td>
+                <td>{{player.height_M}} m</td>
+            </tr>
+            <tr>
+                <td class="col-4 col-md-2">Weight:</td>
+                <td>{{player.weight_Kg}} Kg</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
